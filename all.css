@@ -1,0 +1,319 @@
+@-moz-document regexp("(.*www\.nicovideo\.jp/watch.*|.*test-page/flash.*)") {
+  body, .header, .tagCaption, .banner.ads,
+  .wallAlignmentArea, #bottomContentTabContainer #outline {
+    background: #202227 !important; }
+
+  #videoHeaderDetail, .shortVideoInfo, .videoDescription, .userProfile, .videoMainInfoContainer, .extraVideoInfo, .favVideoOwner, .favVideoOwner .isNotFavoritedText, .favVideoOwner .isFavoritedText,
+  .parentVideoInfo, .parentVideoInfo cct, .expandTriger, #videoTagContainer, .toggleTagEdit, .videoHeaderTagLink, #videoMenuWrapper, .videoMenuList > a,
+  #playerContainer,
+  #playerTabWrapper .player-tab-item, #playerTabWrapper .player-tab-content, #playerTabWrapper .slick-header-column, #playerTabWrapper .panel-body .slick-header-columns, #playerTabWrapper .playerTabAds, #playerTabContainer,
+  .sidebar .tagRelatedBanner, .sidebar .tagRelatedBanner .heading, .sidebar #liveTopics, .sidebar #liveTopics .liveTopicsTitle,
+  .ichiba_mainitem,
+  #superBannerAds {
+    background: #111 !important;
+    color: #b8b8b8 !important;
+    border-color: #1e1e1e !important; }
+
+  VideoDescription-html a, span.VideoDescriptionExpander-switch,
+  .VideoOwnerInfo-pageLink:link, .VideoOwnerUploadedLink-button,
+  .CategoryRankMeta-highestPast a:link, .toggleDetailExpand > span,
+  .ichiba_mainitem .itemname a,
+  #ichibaMainLogo a {
+    color: #6898F8 !important;
+    text-shadow: 1px 1px 1px #004 !important;
+    transition: color 150ms ease-out, text-shadow 150ms ease-out, border 150ms ease-out !important; }
+
+  #textMarquee {
+    background: #000 !important; }
+    #textMarquee .textMarqueeOuter, #textMarquee .prevButton, #textMarquee .nextButton {
+      visibility: hidden !important; }
+
+  .nicoSpotAds {
+    display: none !important; }
+
+  .panelAds {
+    display: none !important; }
+
+  .sidebar #rectangleAd, .sidebar #sideFollowAd {
+    display: none !important; }
+
+  #superBanner.adBnr {
+    display: none !important; }
+
+  #videoExplorerSideFollowAd, #videoExplorerSuperBannerAds {
+    display: none !important; }
+
+  /** Player (flash) */
+  #videoHeaderDetail, .videoDescription, .videoMainInfoContainer, #videoMenuWrapper, #playerContainer {
+    border-width: 3px !important;
+    border-style: solid !important; }
+
+  #videoHeaderMenu .searchText {
+    margin-right: 12px !important;
+    /* TODO set color of input[type="text"] (including ones in other pages) */
+    filter: invert(80%) !important; }
+
+  #videoHeaderMenu .searchText .clear-button-inner {
+    margin-right: 12px !important; }
+
+  #videoHeaderDetail {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 12px 0 !important; }
+
+  .videoDetailExpand h2 {
+    max-width: 656px !important; }
+
+  .videoHeaderTitle {
+    color: #DD6 !important; }
+
+  .toggleDetailExpand {
+    margin: 0 !important;
+    padding: 0 12px !important;
+    height: 10px !important; }
+
+  .toggleDetailExpand .close {
+    position: relative !important;
+    top: 18px !important; }
+
+  .shortVideoInfo {
+    margin-top: -3px !important;
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-top: none !important;
+    padding-left: 12px !important; }
+
+  .favVideoOwnerStar:not(.isFavorited) {
+    filter: invert(80%) !important; }
+
+  .videoDescription {
+    padding: 6px 12px !important;
+    width: auto !important;
+    margin: 0 !important;
+    min-height: 100px !important; }
+
+  .userProfile {
+    margin: 34px 12px 8px 8px !important;
+    /* TRBL */
+    border-width: 2px !important;
+    border-style: solid !important; }
+
+  .videoMainInfoContainer {
+    padding: 6px 12px 10px !important;
+    margin-top: 8px !important; }
+
+  .parentVideoInfo {
+    margin-left: 0 !important;
+    border-width: 2px !important; }
+
+  .dicIcon .dic {
+    display: inline !important;
+    padding-left: 0 !important;
+    vertical-align: unset !important; }
+
+  .socialLinkGoogle {
+    filter: brightness(90%) !important; }
+
+  #topVideoInfo {
+    margin-bottom: 0 !important; }
+
+  #videoHeader.menuClosed {
+    margin-bottom: 0px !important;
+    padding-bottom: 8px !important; }
+
+  #videoHeader.menuOpened {
+    padding-bottom: 20px !important; }
+
+  #videoTagContainer {
+    margin-top: 8px !important;
+    /* see #topVideoInfo */
+    padding: 4px 12px 4px !important;
+    width: auto !important;
+    height: auto !important;
+    border-style: solid !important;
+    border-width: 3px !important; }
+
+  .toggleTagEdit {
+    height: auto !important;
+    padding: 2px 0 !important;
+    margin-top: 2px !important; }
+
+  .toggleTagEdit .videoHeaderTagEditLink {
+    text-shadow: 1px 1px 1px #733 !important; }
+
+  .tagInner {
+    height: 54px !important;
+    padding-right: 32px !important; }
+
+  .videoMenuToggleButton {
+    transform: scale(0.5) !important;
+    margin: 0 12px 3px 0 !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important; }
+
+  #videoMenuWrapper {
+    width: auto !important;
+    margin-top: -3px !important;
+    /* in order to remove border-top */
+    border-top: none !important; }
+
+  #videoMenuTopList {
+    margin-top: 6px !important; }
+
+  #videoMenuTopList .nicoru-button {
+    display: none !important; }
+
+  /*     .videoMenuList { width: 100px !important; } */
+  #playerContainer {
+    padding-top: 0 !important;
+    margin-bottom: 8px !important; }
+
+  #textMarquee {
+    background: #000 !important;
+    border-bottom: dotted #303030 2px !important; }
+
+  /* Comment panel (flash) */
+  #playerTabContainer {
+    border-color: #333 !important;
+    border-width: 2px !important; }
+
+  #playerTabContainer .player-tab-item {
+    border-color: #333 !important;
+    border-width: 2px !important;
+    color: #ddd !important;
+    font-size: 105% !important; }
+
+  #playerTabContainer .player-tab-item.active {
+    background: #444 !important;
+    color: #eeeee0 !important;
+    z-index: 1000 !important; }
+
+  #playerTabContainer .player-tab-content {
+    border-top: solid #444 1px !important; }
+
+  #playerTabWrapper .panel-header > .header-icon {
+    filter: invert(80%) !important; }
+
+  #playerTabWrapper .panel-body .panel-grid {
+    border-color: #999 !important;
+    border-width: 1px !important; }
+
+  #playerTabWrapper .panel-body .slick-header-columns {
+    border-bottom: #999 solid 2px !important;
+    margin-left: 2px !important; }
+
+  #playerTabWrapper .panel-body .slick-resizable-handle {
+    right: 0px !important;
+    width: 3px !important;
+    background: #a0aabb !important; }
+
+  #playerTabWrapper .panel-body .slick-header, #playerTabWrapper .panel-body .slick-header-columns, #playerTabWrapper .panel-body .slick-header-columns .slick-header-column {
+    background: #202020 !important;
+    color: #ddd !important; }
+
+  #playerTabWrapper .panel-body .slick-header-columns .slick-header-column.slick-header-column-sorted {
+    color: #fff !important;
+    background: #444 !important; }
+
+  #playerTabWrapper .slick-viewport .slick-row:hover {
+    background: #303030 !important; }
+
+  #playerTabWrapper .slick-viewport .slick-cell {
+    color: #9df !important; }
+
+  #playerTabWrapper .playerTabAds {
+    visibility: hidden !important; }
+
+  .chipWallListItemImage {
+    filter: invert(100%) !important; }
+
+  .sidebar .tagRelatedBanner, .sidebar #liveTopics {
+    border-width: 2px !important;
+    border-style: solid !important; }
+
+  #bottomContentTabContainer .outer {
+    width: 980px !important; }
+
+  #ichibaMain {
+    width: 640px !important; }
+
+  #ichibaMainLogo a, #ichibaMainLogo a:visited {
+    color: #dd6 !important; }
+
+  .ichiba_mainitem {
+    width: 180px !important;
+    margin: 0px 9px 30px !important;
+    padding: 4px !important;
+    border-style: solid !important;
+    border-width: 2px !important; }
+
+  #ichibaMain dl:nth-child(3n-1) {
+    margin-left: 3px !important; }
+
+  #ichibaMain dl:nth-child(3n+1) {
+    margin-right: 2px !important; }
+
+  .ichiba_mainitem img {
+    filter: brightness(90%) !important; }
+
+  .ichiba_mainitem .price {
+    color: #ddd !important; }
+
+  .ichiba_mainitem .click {
+    color: #ddd !important; }
+
+  .videoHeaderTitle {
+    color: #d5d555 !important; }
+
+  #textMarquee {
+    background: #000 !important; }
+    #textMarquee .textMarqueeOuter, #textMarquee .prevButton, #textMarquee .nextButton {
+      visibility: hidden !important; }
+
+  .playerTabAds,
+  .nicoSpotAds,
+  .sidebar #rectangleAd,
+  .sidebar #sideFollowAd,
+  #emptyIchibaAds,
+  #superBanner.adBnr {
+    display: none !important; } }
+@-moz-document regexp("(.*www\.nicovideo\.jp/watch.*|.*test-page/html5.*)") {
+  body, .HeaderContainer {
+    background: #202227 !important; }
+
+  .HeaderContainer-videoTitle, .VideoDescriptionContainer, .HeaderContainer > div:nth-child(3), .TagContainer {
+    background: #111 !important;
+    color: #b8b8b8 !important;
+    border-color: #1e1e1e !important;
+    border-style: solid !important;
+    border-width: 3px !important;
+    padding: 6px 12px !important; }
+
+  .VideoTitle {
+    color: #d5d555 !important; }
+
+  .MarqueeContainer {
+    border-bottom: dotted #303030 2px !important;
+    margin-bottom: 1px !important; }
+
+  .MainContainer {
+    background: #111 !important;
+    color: #b8b8b8 !important;
+    border-color: #1e1e1e !important;
+    border-style: solid !important;
+    border-width: 3px !important; }
+
+  .VideoStalledPremiumLinkContainer {
+    display: none !important; }
+
+  .MarqueeContainer {
+    background: #000 !important; }
+    .MarqueeContainer .Grid.Marquee, .MarqueeContainer .GridCell.Marquee-itemArea {
+      display: none !important; }
+
+  .CommentPanelBannerAd.NicoSpotAdContainer,
+  .MiniBannerAdContainer,
+  .RectangleAdContainer,
+  .SideFollowAdContainer,
+  .BottomContainer-adContainer {
+    display: none !important; } }

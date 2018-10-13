@@ -1,0 +1,58 @@
+// Player (html5 version)
+
+// prefix may be "http" or "https"
+@-moz-document regexp("(.*www\.nicovideo\.jp/watch.*|.*test-page/html5.*)") {
+    body, .HeaderContainer {
+        @include dark;
+    }
+
+    // there're 4 containers: title, desc, info, tags
+    // (although there's .HeaderContainer, which is 1 level high)
+    %container {
+        @include darker;
+        @include border-solid(3px);
+        padding: 6px 12px;
+    }
+
+    // Title
+    .HeaderContainer-videoTitle { @extend %container; }
+    .VideoTitle { @include title; }
+
+    // Description
+    .VideoDescriptionContainer { @extend %container; }
+
+    // Header (uploader, date, statictics)
+    .HeaderContainer > div:nth-child(3) { @extend %container; }
+
+    // Tags
+    .TagContainer { @extend %container; }
+
+    // Main container
+    .MarqueeContainer {
+        border-bottom: dotted #303030 2px;
+        margin-bottom: 1px;
+    }
+    .MainContainer {
+        @include darker;
+        @include border-solid(3px);
+    }
+
+    // Disable some things
+    .VideoStalledPremiumLinkContainer { display: none; }
+
+    .MarqueeContainer {
+        background: #000;
+        .Grid.Marquee, .GridCell.Marquee-itemArea {
+            display: none;
+        }
+    }
+
+    // Disable some ads
+    .CommentPanelBannerAd.NicoSpotAdContainer, // over comment box
+    .MiniBannerAdContainer, // below comment box
+    .RectangleAdContainer, // above Nama-housou
+    .SideFollowAdContainer, // below Nama-housou
+    .BottomContainer-adContainer, // bottom of the page
+    { display: none; }
+
+}
