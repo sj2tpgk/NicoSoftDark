@@ -20,8 +20,51 @@
     border-width: $width;
 }
 
+@mixin _link-transition {
+    transition: color 150ms ease-out, text-shadow 150ms ease-out, border 150ms ease-out;
+}
 @mixin link {
     color: $link;
     text-shadow: 1px 1px 1px #004;
     transition: color 150ms ease-out, text-shadow 150ms ease-out, border 150ms ease-out;
+    &:hover {
+        color: $link-hover;
+        text-shadow: 1px 1px 1px #22a;
+    }
+    &:visited {
+        color: $link-visited;
+        text-shadow: 1px 1px 1px #fff;
+    }
+    &:active {
+        color: $link-active;
+    }
+}
+
+@mixin avatar-invert {
+    filter: invert(70%);
+}
+
+@mixin tag {
+    background: $tag-bg;
+    border-color: $tag-border;
+    transition: border 150ms ease-out, text-shadow 150ms ease-out;
+    &> a {
+        color: $tag-fg;
+        text-shadow: 1px 1px 1px #888;
+    }
+    &:hover {
+        border-color: $tag-hover-border;
+        &> a {
+            color: $tag-hover-fg;
+            text-shadow: 1px 1px 1px #fafaf3;
+        }
+    }
+}
+
+@mixin comment {
+    background: $comment-bg;
+    color: $comment-fg;
+    &:hover {
+        background: lighten($comment-bg, 17%);
+    }
 }

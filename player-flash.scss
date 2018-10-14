@@ -2,7 +2,7 @@
 // chaos
 
 // prefix may be "http" or "https"
-@-moz-document regexp("(.*www\.nicovideo\.jp/watch.*|.*test-page/flash.*)") {
+@-moz-document regexp(".*www\.nicovideo\.jp.watch.*") {
 
     body, .header, .tagCaption, .banner.ads,
     .wallAlignmentArea, #bottomContentTabContainer #outline {

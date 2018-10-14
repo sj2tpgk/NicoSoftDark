@@ -1,4 +1,4 @@
-@-moz-document regexp("(.*www\.nicovideo\.jp/watch.*|.*test-page/flash.*)") {
+@-moz-document regexp(".*www\.nicovideo\.jp.watch.*") {
   body, .header, .tagCaption, .banner.ads,
   .wallAlignmentArea, #bottomContentTabContainer #outline {
     background: #202227 !important; }
@@ -22,6 +22,26 @@
     color: #6898F8 !important;
     text-shadow: 1px 1px 1px #004 !important;
     transition: color 150ms ease-out, text-shadow 150ms ease-out, border 150ms ease-out !important; }
+    VideoDescription-html a:hover, span.VideoDescriptionExpander-switch:hover,
+    .VideoOwnerInfo-pageLink:link:hover, .VideoOwnerUploadedLink-button:hover,
+    .CategoryRankMeta-highestPast a:link:hover, .toggleDetailExpand > span:hover,
+    .ichiba_mainitem .itemname a:hover,
+    #ichibaMainLogo a:hover {
+      color: #80c0f0 !important;
+      text-shadow: 1px 1px 1px #22a !important; }
+    VideoDescription-html a:visited, span.VideoDescriptionExpander-switch:visited,
+    .VideoOwnerInfo-pageLink:link:visited, .VideoOwnerUploadedLink-button:visited,
+    .CategoryRankMeta-highestPast a:link:visited, .toggleDetailExpand > span:visited,
+    .ichiba_mainitem .itemname a:visited,
+    #ichibaMainLogo a:visited {
+      color: #CA85AF !important;
+      text-shadow: 1px 1px 1px #fff !important; }
+    VideoDescription-html a:active, span.VideoDescriptionExpander-switch:active,
+    .VideoOwnerInfo-pageLink:link:active, .VideoOwnerUploadedLink-button:active,
+    .CategoryRankMeta-highestPast a:link:active, .toggleDetailExpand > span:active,
+    .ichiba_mainitem .itemname a:active,
+    #ichibaMainLogo a:active {
+      color: #aaf !important; }
 
   #textMarquee {
     background: #000 !important; }
@@ -277,11 +297,11 @@
   #emptyIchibaAds,
   #superBanner.adBnr {
     display: none !important; } }
-@-moz-document regexp("(.*www\.nicovideo\.jp/watch.*|.*test-page/html5.*)") {
+@-moz-document regexp(".*www\.nicovideo\.jp.watch.*") {
   body, .HeaderContainer {
     background: #202227 !important; }
 
-  .HeaderContainer-videoTitle, .VideoDescriptionContainer, .HeaderContainer > div:nth-child(3), .TagContainer {
+  .HeaderContainer > div:nth-child(1), .VideoDescriptionContainer, .HeaderContainer > div:nth-child(3), .TagContainer {
     background: #111 !important;
     color: #b8b8b8 !important;
     border-color: #1e1e1e !important;
@@ -289,8 +309,87 @@
     border-width: 3px !important;
     padding: 6px 12px !important; }
 
+  .HeaderContainer > div:nth-child(1) {
+    width: 100% !important; }
+
   .VideoTitle {
     color: #d5d555 !important; }
+
+  .SearchBox {
+    height: 24px !important;
+    border: solid #666 1px !important;
+    border-radius: 2px !important; }
+    .SearchBox .SearchBox-optionButton {
+      padding: 2px !important;
+      background: #323232 !important;
+      border-right: solid #666 1px !important; }
+      .SearchBox .SearchBox-optionButton .SearchBox-optionButtonIcon {
+        width: 18px !important;
+        height: 18px !important; }
+      .SearchBox .SearchBox-optionButton .SearchBox-optionDown {
+        margin-right: 4px !important;
+        width: 10px !important; }
+    .SearchBox .TagSuggestionInput-input {
+      background: #323232 !important;
+      box-shadow: none !important;
+      color: #eee !important; }
+    .SearchBox .SearchBox-submitButton {
+      padding: 5px !important; }
+
+  .VideoDescriptionContainer {
+    width: 100% !important; }
+
+  .VideoOwnerIcon-image {
+    filter: invert(70%) !important; }
+
+  .VideoOwnerInfo-pageLink {
+    color: #6898F8 !important;
+    text-shadow: 1px 1px 1px #004 !important;
+    transition: color 150ms ease-out, text-shadow 150ms ease-out, border 150ms ease-out !important; }
+    .VideoOwnerInfo-pageLink:hover {
+      color: #80c0f0 !important;
+      text-shadow: 1px 1px 1px #22a !important; }
+    .VideoOwnerInfo-pageLink:visited {
+      color: #CA85AF !important;
+      text-shadow: 1px 1px 1px #fff !important; }
+    .VideoOwnerInfo-pageLink:active {
+      color: #aaf !important; }
+
+  .VideoMetaContainer > div {
+    box-shadow: none !important;
+    border-left: dotted #222 2px !important; }
+
+  .VideoMetaContainer > div > p {
+    background: #111 !important;
+    color: #b8b8b8 !important;
+    border-color: #1e1e1e !important; }
+
+  .VideoMetaContainer > div > time, .VideoMetaContainer > div span {
+    background: #111 !important;
+    color: #b8b8b8 !important;
+    border-color: #1e1e1e !important; }
+
+  .TagContainer .ClickInterceptor {
+    filter: invert(85%) brightness(140%) !important; }
+
+  .TagContainer-editButton {
+    border-radius: 3px !important; }
+
+  .TagItem {
+    background: #030303 !important;
+    border-color: #225 !important;
+    transition: border 150ms ease-out, text-shadow 150ms ease-out !important;
+    border-radius: 3px !important; }
+    .TagItem > a {
+      color: #ddd !important;
+      text-shadow: 1px 1px 1px #888 !important; }
+    .TagItem:hover {
+      border-color: #80c0f0 !important; }
+      .TagItem:hover > a {
+        color: #fafaf3 !important;
+        text-shadow: 1px 1px 1px #fafaf3 !important; }
+    .TagItem > a {
+      font-weight: normal !important; }
 
   .MarqueeContainer {
     border-bottom: dotted #303030 2px !important;
@@ -302,6 +401,69 @@
     border-color: #1e1e1e !important;
     border-style: solid !important;
     border-width: 3px !important; }
+
+  .MainContainer-commentPanel {
+    background: #111 !important;
+    color: #b8b8b8 !important;
+    border-color: #1e1e1e !important; }
+    .MainContainer-commentPanel .VideoMenuContainer {
+      position: absolute !important;
+      bottom: 0 !important; }
+      .MainContainer-commentPanel .VideoMenuContainer:after {
+        border-bottom: none !important; }
+    .MainContainer-commentPanel .VideoMenuContainer-areaLeft {
+      background: #111 !important;
+      color: #b8b8b8 !important;
+      border-color: #1e1e1e !important; }
+      .MainContainer-commentPanel .VideoMenuContainer-areaLeft .ClickInterceptor {
+        filter: invert(70%) !important; }
+      .MainContainer-commentPanel .VideoMenuContainer-areaLeft .VideoMenuContainer-button {
+        width: 25px !important; }
+      .MainContainer-commentPanel .VideoMenuContainer-areaLeft .UadButtonBalloon {
+        background-color: #000 !important;
+        margin: -3px 0 0 !important;
+        height: 33px !important;
+        padding: 0px 8px !important;
+        border-color: #999 !important; }
+        .MainContainer-commentPanel .VideoMenuContainer-areaLeft .UadButtonBalloon a {
+          color: #6898F8 !important;
+          text-shadow: 1px 1px 1px #004 !important;
+          transition: color 150ms ease-out, text-shadow 150ms ease-out, border 150ms ease-out !important; }
+          .MainContainer-commentPanel .VideoMenuContainer-areaLeft .UadButtonBalloon a:hover {
+            color: #80c0f0 !important;
+            text-shadow: 1px 1px 1px #22a !important; }
+          .MainContainer-commentPanel .VideoMenuContainer-areaLeft .UadButtonBalloon a:visited {
+            color: #CA85AF !important;
+            text-shadow: 1px 1px 1px #fff !important; }
+          .MainContainer-commentPanel .VideoMenuContainer-areaLeft .UadButtonBalloon a:active {
+            color: #aaf !important; }
+    .MainContainer-commentPanel .VideoMenuContainer-areaRight {
+      background: #111 !important;
+      color: #b8b8b8 !important;
+      border-color: #1e1e1e !important;
+      filter: brightness(90%) !important; }
+    .MainContainer-commentPanel .CommentPanelContainer, .MainContainer-commentPanel .CommentPanelContainer.in-hiddenMiniBanner {
+      top: 0 !important;
+      bottom: 44px !important; }
+    .MainContainer-commentPanel .___header-table___2EekI {
+      background: #474747 !important; }
+      .MainContainer-commentPanel .___header-table___2EekI > span {
+        background: transparent !important;
+        color: #eeeeee !important;
+        border-color: #1e1e1e !important; }
+    .MainContainer-commentPanel .___table___3Fnci > div {
+      background: #111 !important;
+      color: #9df !important; }
+      .MainContainer-commentPanel .___table___3Fnci > div:hover {
+        background: #3c3c3c !important; }
+      .MainContainer-commentPanel .___table___3Fnci > div span {
+        border-color: #666 !important; }
+    .MainContainer-commentPanel .___table___3Fnci > div:nth-child(2n-1) {
+      background: #111 !important;
+      color: #9df !important;
+      background: #191919 !important; }
+      .MainContainer-commentPanel .___table___3Fnci > div:nth-child(2n-1):hover {
+        background: #3c3c3c !important; }
 
   .VideoStalledPremiumLinkContainer {
     display: none !important; }
